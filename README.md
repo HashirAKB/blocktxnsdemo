@@ -1,6 +1,6 @@
 # Blockchain Transaction Demo
 
-Welcome to the **Blockchain Transaction Demo**! This project is an interactive React component that demonstrates how transactions work on the blockchain for two popular blockchain networks: **Solana** and **Ethereum**.
+Welcome to the **Blockchain Transaction Demo**! This project is an interactive React app that demonstrates how transactions work on the blockchain for two popular blockchain networks: **Solana** and **Ethereum**.
 
 ## Introduction
 
