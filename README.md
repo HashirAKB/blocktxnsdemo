@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+# Blockchain Transaction Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Blockchain Transaction Demo**! This project is an interactive React component that demonstrates how transactions work on the blockchain for two popular blockchain networks: **Solana** and **Ethereum**.
 
-Currently, two official plugins are available:
+## Introduction
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Blockchain technology is revolutionizing the way transactions are conducted, providing a decentralized, secure, and transparent system. Understanding how transactions work on the blockchain is essential for anyone looking to dive into this exciting field.
 
-## Expanding the ESLint configuration
+This demo provides an educational and interactive way to learn about blockchain transactions. It simulates the process for both **Solana** (using ED25519) and **Ethereum** (using secp256k1), allowing users to visualize and understand the steps involved in creating, signing, and verifying blockchain transactions.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Interactive Simulation**: Step-by-step demonstration of the blockchain transaction process.
+- **Dual Blockchain Support**: Supports both Solana and Ethereum, showcasing the differences and similarities in their transaction processes.
+- **Visual Feedback**: Uses icons and color-coded steps to provide visual feedback at each stage of the transaction.
+- **Educational Content**: Perfect for beginners and educators to learn and teach how blockchain transactions are executed.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Demo
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+![Blockchain Transaction Demo](scrnsht.png)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+_An interactive demo that guides you through the process of creating and verifying transactions on the blockchain._
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Installation
+
+To run this project locally, you'll need to have Node.js and npm installed. Then follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/blockchain-transaction-demo.git
+   cd blockchain-transaction-demo
+   ```
+
+2. Install the required dependencies:
+   ```bash
+   npm install @noble/ed25519 @noble/secp256k1 lucide-react
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+## Usage
+
+Once the local server is running, you can access the demo in your browser at `http://localhost:5173`. The interface will guide you through the process of creating and verifying transactions on both Solana and Ethereum.
+
+### Step-by-Step Process
+
+1. **Generate Keypair**: Create a public/private keypair.
+2. **Create Transaction**: Enter transaction details like recipient, amount, and blockchain-specific parameters.
+3. **Hash Transaction**: The transaction details are hashed.
+4. **Sign Transaction**: The transaction is signed using the private key.
+5. **Verify Transaction**: Simulate the miner's role by verifying the transaction.
+
+## Dependencies
+
+This project uses the following libraries:
+
+- **[@noble/ed25519](https://www.npmjs.com/package/@noble/ed25519)**: For key generation and transaction signing on Solana.
+- **[@noble/secp256k1](https://www.npmjs.com/package/@noble/secp256k1)**: For key generation and transaction signing on Ethereum.
+- **[lucide-react](https://www.npmjs.com/package/lucide-react)**: For icons used in the UI.
+
+
+## Contributing
+
+We welcome contributions! If you have suggestions or improvements, feel free to open an issue or submit a pull request.

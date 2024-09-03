@@ -94,6 +94,7 @@ export default function BlockchainTransactionDemo() {
     } else {
       const privateKey = Uint8Array.from(Buffer.from(keys.ethereum.privateKey, 'hex'))
       const signature = await secp.signAsync(transactionHash[type], privateKey)
+      // @ts-ignore
       setSignature(prev => ({ ...prev, ethereum: Buffer.from(signature).toString('hex') }))
     }
     setCurrentStep(prev => ({ ...prev, [type]: 4 }))
